@@ -1,5 +1,8 @@
- .u-section-1 {
-  background-image: url("images/b61d3be4-4d0d-cc42-06b0-54e455e333da.png");
+h2 {
+  color: dodgerblue;
+}
+.u-section-1 {
+  background-image: url("../images/b61d3be4-4d0d-cc42-06b0-54e455e333da.png");
   background-position: 50% 96.25%;
 }
 
@@ -102,7 +105,7 @@
     font-size: 1.875rem;
   }
 } .u-section-2 {
-  background-image: url("images/3dd11a8f-dac7-6d0a-bd1f-7186c46ad4a6.png");
+  background-image: url("../images/3dd11a8f-dac7-6d0a-bd1f-7186c46ad4a6.png");
   background-position: 50% 50%;
 }
 
@@ -158,7 +161,6 @@
 
 .u-section-2 .u-custom-html-2 {
   height: auto;
-  min-height: 137px;
   width: 492px;
   margin: 19px 0 0;
 }

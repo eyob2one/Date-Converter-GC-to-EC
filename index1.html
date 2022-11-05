@@ -5,6 +5,7 @@
     <meta name="keywords" content="​We build future-forward experiences, We work in dedicated project teams, UX design">
     <meta name="description" content="">
     <title>Home 1</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nicepage.css" media="screen">
     <link rel="stylesheet" href="css/Home-1.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
@@ -66,239 +67,68 @@
         </div>
       </div>
     </section>
+    <div class="container block__black" style="padding: 2em;">
+      <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="card">
+                  <p class="lead text-center" style="margin-top: 1rem">Today in Ethiopian Calendar is <strong id="ethTodayTextArea">...</strong>
+                      <button type="button" class="btn btn-sm" onclick="$('#ethTodayTextArea').html(toEthiopianDateTimeString(new Date()))">
+                          <strong style="font-size: x-large">⟳</strong>
+                      </button>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
     <section class="u-align-center u-clearfix u-image u-section-2" id="carousel_9f83" data-image-width="1923" data-image-height="1600">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-white u-text-1"> Design Studio Capabilities</h2>
+        <h2 class="u-text u-text-white u-text-1"> Greigorian Date</h2>
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
             <div class="u-align-left u-bottom-left-radius-20 u-bottom-right-radius-20 u-container-style u-custom-item u-list-item u-palette-2-base u-repeater-item u-shape-round u-list-item-1">
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <div class="u-clearfix u-custom-html u-custom-html-1">
-                  <form name="form1" onsubmit="return false">
-                    <span style="background: silver">Ethiopian Day:</span>
-                    <textarea rows="1" name="ethDayTextArea" readonly="" style="width: 130px"></textarea>
-                    <br>
-                    <span style="background: silver">Ethiopian Day:</span>
-                    <select name="engDayScroll" onchange="optionToEnglish()">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
-                      <option>10</option>
-                      <option>11</option>
-                      <option>12</option>
-                      <option>13</option>
-                      <option>14</option>
-                      <option>15</option>
-                      <option>16</option>
-                      <option>17</option>
-                      <option>18</option>
-                      <option>19</option>
-                      <option>20</option>
-                      <option>21</option>
-                      <option>22</option>
-                      <option>23</option>
-                      <option>24</option>
-                      <option>25</option>
-                      <option>26</option>
-                      <option>27</option>
-                      <option>28</option>
-                      <option>29</option>
-                      <option>30</option>
-                    </select>
-                    <select name="engMonthScroll" onchange="optionToEnglish()">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
-                      <option>10</option>
-                      <option>11</option>
-                      <option>12</option>
-                      <option>13</option>
-                    </select>
-                    <select name="engYearScroll" onchange="optionToEnglish()">
-                      <option>1968</option>
-                      <option>1969</option>
-                      <option>1970</option>
-                      <option>1971</option>
-                      <option>1972</option>
-                      <option>1973</option>
-                      <option>1974</option>
-                      <option>1975</option>
-                      <option>1976</option>
-                      <option>1977</option>
-                      <option>1978</option>
-                      <option>1979</option>
-                      <option>1980</option>
-                      <option>1981</option>
-                      <option>1982</option>
-                      <option>1983</option>
-                      <option>1984</option>
-                      <option>1985</option>
-                      <option>1986</option>
-                      <option>1987</option>
-                      <option>1988</option>
-                      <option>1989</option>
-                      <option>1990</option>
-                      <option>1991</option>
-                      <option>1992</option>
-                      <option>1993</option>
-                      <option>1994</option>
-                      <option>1995</option>
-                      <option>1996</option>
-                      <option>1997</option>
-                      <option>1998</option>
-                      <option>1999</option>
-                      <option>2000</option>
-                      <option>2001</option>
-                      <option>2002</option>
-                      <option>2003</option>
-                      <option>2004</option>
-                      <option>2005</option>
-                      <option>2006</option>
-                      <option>2007</option>
-                      <option>2008</option>
-                      <option>2009</option>
-                      <option>2010</option>
-                      <option>2011</option>
-                      <option>2012</option>
-                      <option>2013</option>
-                      <option>2014</option>
-                      <option>2015</option>
-                      <option>2016</option>
-                      <option>2017</option>
-                    </select>
-                    <span style="background: silver">Day in English:</span>
-                    <textarea rows="1" name="engDayTextArea" readonly="" style="width: 146px"></textarea>
-                  </form>
+                  <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 offset-md-1 offset-lg-2 row-eq-height">
+                            <div class="card">
+                                <div class="card-header text-center" style="background-color:rgb(29, 139, 248)">European Date</div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <input type="date" class="form-control" id="EuropeanDate" onchange="updateCalculatedEthDateOnPage()" />
+                                        <p id="EurDayTextArea"></p>
+                                        <span class="help-block">Change the date above to convert to Ethiopian calendar.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h4 class="u-text u-text-2" spellcheck="false">Ethiopian Date</h4>
+                <h4 class="u-text u-text-2" spellcheck="false">Greigorian Date</h4>
               </div>
             </div>
             <div class="u-align-left u-bottom-left-radius-20 u-bottom-right-radius-20 u-container-style u-custom-item u-list-item u-palette-3-base u-repeater-item u-shape-round u-video-cover u-list-item-2">
               <div class="u-container-layout u-container-layout-2">
                 <div class="u-clearfix u-custom-html u-custom-html-2">
-                  <form name="form1" onsubmit="return false">
-                    <span style="background: silver">Ethiopian Day:</span
-                      ><select name="engDayScroll" onchange="optionToEnglish()">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                        <option>13</option>
-                        <option>14</option>
-                        <option>15</option>
-                        <option>16</option>
-                        <option>17</option>
-                        <option>18</option>
-                        <option>19</option>
-                        <option>20</option>
-                        <option>21</option>
-                        <option>22</option>
-                        <option>23</option>
-                        <option>24</option>
-                        <option>25</option>
-                        <option>26</option>
-                        <option>27</option>
-                        <option>28</option>
-                        <option>29</option>
-                        <option>30</option>
-                      </select>
-                      <select name="engMonthScroll" onchange="optionToEnglish()">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                        <option>13</option>
-                      </select>
-                      <select name="engYearScroll" onchange="optionToEnglish()">
-                        <option>1968</option>
-                        <option>1969</option>
-                        <option>1970</option>
-                        <option>1971</option>
-                        <option>1972</option>
-                        <option>1973</option>
-                        <option>1974</option>
-                        <option>1975</option>
-                        <option>1976</option>
-                        <option>1977</option>
-                        <option>1978</option>
-                        <option>1979</option>
-                        <option>1980</option>
-                        <option>1981</option>
-                        <option>1982</option>
-                        <option>1983</option>
-                        <option>1984</option>
-                        <option>1985</option>
-                        <option>1986</option>
-                        <option>1987</option>
-                        <option>1988</option>
-                        <option>1989</option>
-                        <option>1990</option>
-                        <option>1991</option>
-                        <option>1992</option>
-                        <option>1993</option>
-                        <option>1994</option>
-                        <option>1995</option>
-                        <option>1996</option>
-                        <option>1997</option>
-                        <option>1998</option>
-                        <option>1999</option>
-                        <option>2000</option>
-                        <option>2001</option>
-                        <option>2002</option>
-                        <option>2003</option>
-                        <option>2004</option>
-                        <option>2005</option>
-                        <option>2006</option>
-                        <option>2007</option>
-                        <option>2008</option>
-                        <option>2009</option>
-                        <option>2010</option>
-                        <option>2011</option>
-                        <option>2012</option>
-                        <option>2013</option>
-                        <option>2014</option>
-                        <option>2015</option>
-                        <option>2016</option>
-                        <option>2017</option></select
-                      ><span style="background: silver">Day in English:</span>
-                      <textarea
-                        rows="1"
-                        name="engDayTextArea"
-                        readonly
-                        style="width: 146px"
-                      ></textarea>
-                  </form>
+                  <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 row-eq-height">
+                    <div class="card">
+                        <div class="card-header text-center" style="background-image: tomato;">Ethiopian Date</div>
+                        <div class="card-body">
+                            <div class="form-inline">
+                                <div>
+                                    <input type="number" class="form-control" id="EthMonthScroll" min="1" max="13" style="width:3em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()"> /
+                                    <input type="number" class="form-control" id="EthDayScroll" min="1" max="30" style="width:3em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()"> /
+                                    <input type="number" class="form-control" id="EthYearScroll" min="-99999" max="999999" style="width:4em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()">
+                                </div>
+                                <p id="ethDayTextArea" style="width:100%;"></p>
+                                <span class="help-block" style="width:100%;">Change the date above to convert to European calendar.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                   
                 </div>
-                <h4 class="u-text u-text-3" spellcheck="false">Communication straty</h4>
+                <h4 class="u-text u-text-3" spellcheck="false">Ethiopian Date</h4>
               </div>
             </div>
           </div>
