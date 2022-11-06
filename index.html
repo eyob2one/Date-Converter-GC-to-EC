@@ -1,118 +1,153 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Date Converter - Ethiopian Calendar</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,
-        user-scalable=no,shrink-to-fit=no">
-
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-        <!-- todo: add local options too -->
-    </head>
-
-    <body onload="initDates()">
-        <!--[if lte IE 9]>
-              <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-        <div class="container" style="padding: 2em;">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="card">
-                        <p class="lead text-center" style="margin-top: 1rem">Today in Ethiopian Calendar is <strong id="ethTodayTextArea">...</strong>
-                            <button type="button" class="btn btn-sm" onclick="$('#ethTodayTextArea').html(toEthiopianDateTimeString(new Date()))">
-                                <strong style="font-size: x-large">⟳</strong>
-                            </button>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 offset-md-1 offset-lg-2 row-eq-height">
-                    <div class="card">
-                        <div class="card-header text-center" style="background-color:rgb(29, 139, 248)">European Date</div>
-                        <div class="card-body">
-                            <div class="form-group">
-                                <input type="date" class="form-control" id="EuropeanDate" onchange="updateCalculatedEthDateOnPage()" />
-                                <p id="EurDayTextArea"></p>
-                                <span class="help-block">Change the date above to convert to Ethiopian calendar.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 row-eq-height">
-                    <div class="card">
-                        <div class="card-header text-center" style="background-image: linear-gradient(#90ee90,#ffffe0,#ffffe0,#e87171);">Ethiopian Date</div>
-                        <div class="card-body">
-                            <div class="form-inline">
-                                <div>
-                                    <input type="number" class="form-control" id="EthMonthScroll" min="1" max="13" style="width:3em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()"> /
-                                    <input type="number" class="form-control" id="EthDayScroll" min="1" max="30" style="width:3em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()"> /
-                                    <input type="number" class="form-control" id="EthYearScroll" min="-99999" max="999999" style="width:4em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()">
-                                </div>
-                                <p id="ethDayTextArea" style="width:100%;"></p>
-                                <span class="help-block" style="width:100%;">Change the date above to convert to European calendar.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-        <script src="js/dateconverter.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>');</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-
-        <script>
-            window.ga = function () {
-                ga.q.push(arguments);
-            };
-            ga.q = [];
-            ga.l = +new Date;
-            ga('create', 'UA-124250343-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124250343-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'UA-124250343-1');
-        </script>
-
-    </body>
-
-</html>
-<!-- 
-    <a class="btn btn-block btn-social btn-twitter">
-    <span class="fa fa-twitter"></span> Sign in with Twitter
-  </a>
-Or if you just want the icon button, use it like this:
-
-  <a class="btn btn-social-icon btn-twitter">
-    <span class="fa fa-twitter"></span>
-  </a>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="​We build future-forward experiences, We work in dedicated project teams, UX design">
+    <meta name="description" content="">
+    <title>Home 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="css/Home-1.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.21.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     
-bootstrap-social.css-->
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/logo.webp"
+}</script>
+    <meta name="theme-color" content="#34b8d0">
+    <meta property="og:title" content="Home 1">
+    <meta property="og:type" content="website">
+  </head>
+  <body data-home-page="https://website3242122.nicepage.io/Home-1.html?version=7be6c28d-4e4a-4545-ac33-6cf921486192" data-home-page-title="Home 1" class="u-body u-xl-mode" data-lang="en">
+    <header class="u-clearfix u-header u-header" id="sec-bf5e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://mobotherapy2.blogspot.con" class="border u-image u-logo u-image-1" data-image-width="288" data-image-height="288" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="" data-animation-delay="1000" title="MoboTherapy" target="_blank">
+          <img src="images/logo.webp" class="icon u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-hamburger u-offcanvas u-menu-1" data-responsive-from="XL">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700;">
+            <a class="u-button-style u-custom-border u-custom-border-color u-custom-borders u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-2-base u-text-grey-90 u-text-hover-palette-2-base" href="#" style="padding: 10px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-2-base u-text-grey-90 u-text-hover-palette-2-base" href="#" style="padding: 10px;">Page 6</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-2-base u-text-grey-90 u-text-hover-palette-2-base" href="#" style="padding: 10px;">Page 7</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Page 6</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Page 7</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-image u-section-1" id="sec-f941" data-image-width="1923" data-image-height="1200">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-left u-container-style u-group u-shape-rectangle u-group-1">
+          <div class="u-container-layout u-valign-top u-container-layout-1">
+            <h2 class="u-text u-text-1" spellcheck="false"> Ethiopian to Greigorian Date Converter<br>
+            </h2>
+            <a href="https://github.com/eyob2one/Date-Converter-GC-to-EC" class="u-active-palette-4-light-3 u-border-2 u-border-active-grey-90 u-border-grey-90 u-border-hover-grey-90 u-btn u-btn-round u-button-style u-grey-90 u-hover-palette-4-light-3 u-radius-50 u-text-active-grey-90 u-text-body-alt-color u-text-hover-grey-90 u-btn-1" target="_blank">SEE ON GITHUB</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block block--dark block--skewed-right block-showcase">
+      <div class="card-block">
+          <p class="lead text-center" style="margin-top: 1rem">Today in Ethiopian Calendar is <strong id="ethTodayTextArea">...</strong>
+              <button type="button" class="btn btn-sm" onclick="$('#ethTodayTextArea').html(toEthiopianDateTimeString(new Date()))">
+                  <strong style="font-size: x-large">⟳</strong>
+              </button>
+          </p>
+      </div>
+    </section>
+  <section class="block container block-plans">
+    <div class="grid grid--1x2">
+      <div class="plan">
+        <div class="card card--secondary">
+          <header class="card__header">
+            <h3 class="plan__name">Greigorian Date</h3>
+          </header>
+          <div class="card__body">
+            <div class="form-group">
+                <input type="date" class="form-control" id="EuropeanDate" onchange="updateCalculatedEthDateOnPage()" />
+                <p id="EurDayTextArea"></p>
+                <span class="help-block">Change the date above to convert to Ethiopian calendar.</span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="plan">
+        <div class="card card--primary">
+          <header class="card__header">
+            <h3 class="plan__name">Ethiopian Date</h3>
+          </header>
+          <div class="card__body">
+            <div class="form-inline">
+                <div>
+                    <input type="number" class="form-control" id="EthMonthScroll" min="1" max="13" style="width:3em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()"> /
+                    <input type="number" class="form-control" id="EthDayScroll" min="1" max="30" style="width:3em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()"> /
+                    <input type="number" class="form-control" id="EthYearScroll" min="-99999" max="999999" style="width:4em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()">
+                </div>
+                <p id="ethDayTextArea" style="width:100%;"></p>
+                <span class="help-block" style="width:100%;">Change the date above to convert to European calendar.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+    <section class="u-align-center u-clearfix u-grey-90 u-section-3" id="carousel_ce83">
+      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+        <div class="u-container-style u-group u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <h2 class="u-align-center u-text u-text-1"> Ethiopian Calendar</h2>
+            <p class="u-align-center u-text u-text-2">The Ethiopian calendar has twelve months of thirty days plus five or six epagomenal days, which comprise a thirteenth month.[1] The Ethiopian months begin on the same days as those of the Coptic calendar, but their names are in Ge'ez. A sixth epagomenal day is added every four years, without exception, on 29 August of the Julian calendar, six months before the corresponding Julian leap day. Thus the first day of the Ethiopian calendar year, 1 Mäskäräm, for years between 1900 and 2099 (inclusive), is usually 11 September (Gregorian). It falls on 12 September in years before the Gregorian leap year</p>
+          </div>
+        </div>
+        <div class="u-clearfix u-expanded-width-sm u-expanded-width-xs u-gutter-0 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-top u-container-layout-2">
+                  <a href="https://mobotherapy2.blogspot.com" class="u-active-grey-90 u-border-2 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-grey-90 u-palette-2-base u-radius-50 u-text-active-palette-2-base u-text-body-alt-color u-text-hover-palette-2-base u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Look out our Blog</a>
+                </div>
+              </div>
+              <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-top u-container-layout-3">
+                  <a href="https://github.com/eyob2one"></path></svg><img></span>&nbsp;see our work
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="u-clearfix u-footer u-grey-90" id="sec-f146"><div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-border-1 u-border-white u-expanded-width u-line u-line-horizontal u-opacity u-opacity-50 u-line-1"></div>
+      </div></footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
