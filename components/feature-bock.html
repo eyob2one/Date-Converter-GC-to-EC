@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <section class="block block--dark block--skewed-right block-showcase">
+        <div class="card-block">
+            <p class="lead text-center" style="margin-top: 1rem">Today in Ethiopian Calendar is <strong id="ethTodayTextArea">...</strong>
+                <button type="button" class="btn btn-sm" onclick="$('#ethTodayTextArea').html(toEthiopianDateTimeString(new Date()))">
+                    <strong style="font-size: x-large">⟳</strong>
+                </button>
+            </p>
+        </div>
+      </section>
+</body>
+</html>

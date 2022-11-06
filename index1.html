@@ -67,74 +67,53 @@
         </div>
       </div>
     </section>
-    <div class="container block__black" style="padding: 2em;">
-      <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <div class="card">
-                  <p class="lead text-center" style="margin-top: 1rem">Today in Ethiopian Calendar is <strong id="ethTodayTextArea">...</strong>
-                      <button type="button" class="btn btn-sm" onclick="$('#ethTodayTextArea').html(toEthiopianDateTimeString(new Date()))">
-                          <strong style="font-size: x-large">⟳</strong>
-                      </button>
-                  </p>
-              </div>
-          </div>
+    <section class="block block--dark block--skewed-right block-showcase">
+      <div class="card-block">
+          <p class="lead text-center" style="margin-top: 1rem">Today in Ethiopian Calendar is <strong id="ethTodayTextArea">...</strong>
+              <button type="button" class="btn btn-sm" onclick="$('#ethTodayTextArea').html(toEthiopianDateTimeString(new Date()))">
+                  <strong style="font-size: x-large">⟳</strong>
+              </button>
+          </p>
       </div>
-  </div>
-    <section class="u-align-center u-clearfix u-image u-section-2" id="carousel_9f83" data-image-width="1923" data-image-height="1600">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-white u-text-1"> Greigorian Date</h2>
-        <div class="u-expanded-width u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-align-left u-bottom-left-radius-20 u-bottom-right-radius-20 u-container-style u-custom-item u-list-item u-palette-2-base u-repeater-item u-shape-round u-list-item-1">
-              <div class="u-container-layout u-similar-container u-container-layout-1">
-                <div class="u-clearfix u-custom-html u-custom-html-1">
-                  <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 offset-md-1 offset-lg-2 row-eq-height">
-                            <div class="card">
-                                <div class="card-header text-center" style="background-color:rgb(29, 139, 248)">European Date</div>
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <input type="date" class="form-control" id="EuropeanDate" onchange="updateCalculatedEthDateOnPage()" />
-                                        <p id="EurDayTextArea"></p>
-                                        <span class="help-block">Change the date above to convert to Ethiopian calendar.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h4 class="u-text u-text-2" spellcheck="false">Greigorian Date</h4>
-              </div>
+    </section>
+  <section class="block container block-plans">
+    <div class="grid grid--1x2">
+      <div class="plan">
+        <div class="card card--secondary">
+          <header class="card__header">
+            <h3 class="plan__name">Greigorian Date</h3>
+          </header>
+          <div class="card__body">
+            <div class="form-group">
+                <input type="date" class="form-control" id="EuropeanDate" onchange="updateCalculatedEthDateOnPage()" />
+                <p id="EurDayTextArea"></p>
+                <span class="help-block">Change the date above to convert to Ethiopian calendar.</span>
             </div>
-            <div class="u-align-left u-bottom-left-radius-20 u-bottom-right-radius-20 u-container-style u-custom-item u-list-item u-palette-3-base u-repeater-item u-shape-round u-video-cover u-list-item-2">
-              <div class="u-container-layout u-container-layout-2">
-                <div class="u-clearfix u-custom-html u-custom-html-2">
-                  <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 row-eq-height">
-                    <div class="card">
-                        <div class="card-header text-center" style="background-image: tomato;">Ethiopian Date</div>
-                        <div class="card-body">
-                            <div class="form-inline">
-                                <div>
-                                    <input type="number" class="form-control" id="EthMonthScroll" min="1" max="13" style="width:3em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()"> /
-                                    <input type="number" class="form-control" id="EthDayScroll" min="1" max="30" style="width:3em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()"> /
-                                    <input type="number" class="form-control" id="EthYearScroll" min="-99999" max="999999" style="width:4em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()">
-                                </div>
-                                <p id="ethDayTextArea" style="width:100%;"></p>
-                                <span class="help-block" style="width:100%;">Change the date above to convert to European calendar.</span>
-                            </div>
-                        </div>
-                    </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="plan">
+        <div class="card card--primary">
+          <header class="card__header">
+            <h3 class="plan__name">Ethiopian Date</h3>
+          </header>
+          <div class="card__body">
+            <div class="form-inline">
+                <div>
+                    <input type="number" class="form-control" id="EthMonthScroll" min="1" max="13" style="width:3em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()"> /
+                    <input type="number" class="form-control" id="EthDayScroll" min="1" max="30" style="width:3em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()"> /
+                    <input type="number" class="form-control" id="EthYearScroll" min="-99999" max="999999" style="width:4em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()">
                 </div>
-                  
-                </div>
-                <h4 class="u-text u-text-3" spellcheck="false">Ethiopian Date</h4>
-              </div>
+                <p id="ethDayTextArea" style="width:100%;"></p>
+                <span class="help-block" style="width:100%;">Change the date above to convert to European calendar.</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      
+    </div>
+  </section>
     <section class="u-align-center u-clearfix u-grey-90 u-section-3" id="carousel_ce83">
       <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
         <div class="u-container-style u-group u-group-1">
