@@ -1,0 +1,23 @@
+{
+  "name": "Date-Converter-GC-to-EC",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery-1.9.1.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eyob2one/Date-Converter-GC-to-EC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eyob2one/Date-Converter-GC-to-EC/issues"
+  },
+  "homepage": "https://github.com/eyob2one/Date-Converter-GC-to-EC#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

@@ -1,1 +1,4 @@
-/blog
+blog/
+node_modules/
+dist/
+.cache/
