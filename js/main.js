@@ -182,3 +182,11 @@ function leftpad(Num, length) {
     length = length || 2;
     return ("000000000" + Num).slice(-length);
 }
+
+// For navigation collapsibles
+const collapsibles = document.querySelectorAll(".collapsible");
+collapsibles.forEach((item) =>
+  item.addEventListener("click", function () {
+    this.classList.toggle("collapsible--expanded");
+  })
+);
