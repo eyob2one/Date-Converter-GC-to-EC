@@ -19,5 +19,8 @@
   "homepage": "https://github.com/eyob2one/Date-Converter-GC-to-EC#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
   }
 }
