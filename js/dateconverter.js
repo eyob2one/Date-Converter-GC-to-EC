@@ -47,10 +47,22 @@ function initDates() {
 
 function createEventListnersHTML() {
   document.querySelector('body').onload = initDates;
-  document.querySelector('#EuropeanDate').onchange = updateCalculatedEthDateOnPage;
-  document.querySelector('#EthMonthScroll').onchange = updateCalculatedEurDateOnPage;
-  document.querySelector('#EthDayScroll').onchange = updateCalculatedEurDateOnPage;
-  document.querySelector('#EthYearScroll').onchange = updateCalculatedEurDateOnPage;
+  document.querySelector('#EuropeanDate').onchange = function() {
+  updateCalculatedEthDateOnPage();
+};
+
+document.querySelector('#EthMonthScroll').onchange = function() {
+  updateCalculatedEurDateOnPage();
+};
+
+// Repeat for #EthDayScroll and #EthYearScroll with the same structure
+
+  document.querySelector('#EthDayScroll').onchange = function() {
+    updateCalculatedEurDateOnPage();
+  };
+  document.querySelector('#EthYearScroll').onchange = function() {
+    updateCalculatedEurDateOnPage();
+  };
 }
 
 var ethTodayTextArea = new Vue({
