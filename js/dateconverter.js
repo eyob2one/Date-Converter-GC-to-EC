@@ -1,6 +1,6 @@
 // Assuming all necessary functions from ./main.js are imported correctly
 import { ethTime, toEthiopianDateTime, toEthiopianDateTimeString, toEuropeanDate, toEuropeanDateString } from './main.js';
-
+import Vue from 'vue';
 
 function updateCalculatedEthDateOnPage() {
   const europeanDateValueArray = document.getElementById('EuropeanDate').value.split('-');
@@ -47,22 +47,10 @@ function initDates() {
 
 function createEventListnersHTML() {
   document.querySelector('body').onload = initDates;
-  document.querySelector('#EuropeanDate').onchange = function() {
-  updateCalculatedEthDateOnPage();
-};
-
-document.querySelector('#EthMonthScroll').onchange = function() {
-  updateCalculatedEurDateOnPage();
-};
-
-// Repeat for #EthDayScroll and #EthYearScroll with the same structure
-
-  document.querySelector('#EthDayScroll').onchange = function() {
-    updateCalculatedEurDateOnPage();
-  };
-  document.querySelector('#EthYearScroll').onchange = function() {
-    updateCalculatedEurDateOnPage();
-  };
+  document.querySelector('#EuropeanDate').onchange = updateCalculatedEthDateOnPage;
+  document.querySelector('#EthMonthScroll').onchange = updateCalculatedEurDateOnPage;
+  document.querySelector('#EthDayScroll').onchange = updateCalculatedEurDateOnPage;
+  document.querySelector('#EthYearScroll').onchange = updateCalculatedEurDateOnPage;
 }
 
 var ethTodayTextArea = new Vue({
@@ -97,5 +85,6 @@ var ethTodayTextArea = new Vue({
 });
 
 export {
-  createEventListnersHTML
+  createEventListnersHTML,
+  ethz
 }
