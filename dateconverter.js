@@ -1,5 +1,5 @@
 // Assuming all necessary functions from ./main.js are imported correctly
-import { ethTime, toEthiopianDateTime, toEthiopianDateTimeString, toEuropeanDate, toEuropeanDateString } from './main.js';
+import { ethTime, toEthiopianDateTime, toEthiopianDateTimeString, toEuropeanDate, toEuropeanDateString } from './js/main.js';
 import Vue from 'vue';
 
 function updateCalculatedEthDateOnPage() {
