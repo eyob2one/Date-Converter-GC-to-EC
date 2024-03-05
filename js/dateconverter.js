@@ -85,6 +85,5 @@ var ethTodayTextArea = new Vue({
 });
 
 export {
-  createEventListnersHTML,
-  ethz
+  createEventListnersHTML
 }
