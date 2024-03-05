@@ -1,8 +1,0 @@
-[build]
-  publish = "dist"  # Adjust the path to your build output directory
-  command = "npm run build"  # Adjust the build command if needed
-
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
