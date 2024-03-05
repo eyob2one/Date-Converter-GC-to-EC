@@ -1,5 +1,5 @@
 // Assuming all necessary functions from ./main.js are imported correctly
-import { ethTime, toEthiopianDateTime, toEthiopianDateTimeString, toEuropeanDate, toEuropeanDateString } from './main';
+import { ethTime, toEthiopianDateTime, toEthiopianDateTimeString, toEuropeanDate, toEuropeanDateString } from './main.js';
 
 function updateCalculatedEthDateOnPage() {
   const europeanDateValueArray = document.getElementById('EuropeanDate').value.split('-');
